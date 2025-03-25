@@ -1,7 +1,7 @@
 import os
 from yt_dlp import YoutubeDL
 
-playlist_url = "https://youtube.com/playlist?list=PLgrA8aw870-uklyb7j4ZyWPoYuH2ekDRx&si=OZ40TCbjE9BD8I3q"
+playlist_url = "https://youtube.com/playlist?list=PLgrA8aw870-uklyb7j4ZyWPoYuH2ekDRx&si=OZ40TCbjE9BD8I3q" #link da playlist essa por exemplo é a minha
 
 ydl_opts = {
     'format': 'bestaudio/best',
@@ -11,12 +11,12 @@ ydl_opts = {
         'preferredcodec': 'mp3',
         'preferredquality': '192',
     }],
-    'download_archive': 'pai.txt',  # Evita duplicatas / nome do arquivo onde a lista de musica baixadas fica
+    'download_archive': 'pai.txt',  # aqui é onde fica a lista de musicas baixadas para Evita duplicatas / nome do arquivo onde a lista de musica baixadas fica
     'ignoreerrors': True,  # Ignora erros de download
 }
 
 def rename_files():
-    folder = 'musicas'
+    folder = 'musicas' # nome da plasta onde fica as musicas baixadas 
     for filename in os.listdir(folder):
         # Verifica se o nome do autor contém "Topic" e remove essa parte
         if " - Topic" in filename:
